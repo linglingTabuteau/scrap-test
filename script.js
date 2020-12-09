@@ -33,7 +33,8 @@ request(
               price: prix,
               urlImage: image,
             };
-        console.log(oneObject);
+        let dataJson = JSON.stringify(oneObject);
+        console.log(dataJson);
       });
     }
   }
