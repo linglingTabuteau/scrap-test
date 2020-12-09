@@ -11,7 +11,7 @@ for (let nbPage = 1; nbPage <= 24; nbPage++) {
       if (!error && response.statusCode == 200) {
         const $ = cheerio.load(html);
         let oneObject = {};
-        $(".contenu").each((index, el) => {
+        $("#container_droite .block_produit").each((index, el) => {
           const link = $(el).find("a").attr("href");
           const title = $(el).find(".titre").text();
           const prix = $(el).find(".prix").find(".prix").text();
