@@ -18,8 +18,6 @@ for (let nbPage = 1; nbPage <= 24; nbPage++) {
         const buf = ic.convert(html);
         const utf8String = buf.toString("utf-8");
 
-        console.log(utf8String);
-
         const $ = cheerio.load(utf8String);
 
         let oneObject = {};
@@ -51,9 +49,7 @@ for (let nbPage = 1; nbPage <= 24; nbPage++) {
           allProducts.push(oneObject);
           // console.log(allProducts.length);
           let dataJson = JSON.stringify(allProducts);
-          fs.writeFileSync("myjsonfile.json", dataJson, "utf8", function (err) {
-            if (err) throw err;
-          });
+          fs.writeFileSync("myjsonfile.json", dataJson);
         });
       }
     }
