@@ -36,7 +36,7 @@ const scrapper = async () => {
     });
   }
   let dataJson = JSON.stringify(allProducts);
-  fs.writeFileSync("myFile.json", dataJson);
+  fs.writeFileSync("myjsonfile.json", dataJson);
 };
 
 scrapper();
